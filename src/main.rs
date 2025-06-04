@@ -43,5 +43,7 @@ impl Book {
 }
 
 fn main() {
-    println!("Hello, world!");
+    loop {
+        println!("Choose an option!");
+    }
 }
