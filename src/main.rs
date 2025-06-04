@@ -1,4 +1,4 @@
-use std::{io};
+use std::{error, io};
 
 struct Book {
     title: String,
@@ -77,9 +77,12 @@ fn menu () -> u8 {
 }
 
 fn parse_string(s: &str) -> u8 {
-
     match s.trim().parse::<u8>() {
         Ok(n) => return n,
-        Err(e) => panic!("{}", e),
+        Err(e) => if (s == "\n") {
+            return 0;
+        } else {
+            panic!("Invalid string: {}", e)
+        }
     }
 }
