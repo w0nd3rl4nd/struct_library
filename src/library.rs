@@ -24,3 +24,7 @@ impl Library {
 
     // Function to display a book (display title and id, user chooses id, gets details)
 }
+
+fn read_string() -> String {
+    return String::from("holi");
+}
